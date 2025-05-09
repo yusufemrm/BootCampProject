@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<BaseDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BaseDb")));
 
+builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
